@@ -3,38 +3,100 @@
 
 using namespace std;
 
-// Problem #1: Write a program to print your name on screen.
-// Problem #2: Write a program to ask user to enter his/her name and print it on screen.
+// --- Structures ---
+struct stInfo {
+    int Age;
+    bool HasDrivingLicense;
+    bool HasRecommendation;
+};
 
-// --- Functions for Problem #1 ---
-void PrintMyName(string Name) 
-{
-    cout << "\nYour Name is: " << Name << endl;
+// --- Problem #1: Procedure ---
+void PrintMyName() {
+    cout << "\nYour Name is: Farah" << endl;
 }
 
-// --- Functions for Problem #2 ---
-string ReadName() 
-{
+// --- Problem #2: Function & Procedure ---
+string ReadName() {
     string Name;
     cout << "Please enter your name? " << endl;
-    getline(cin, Name);
+    getline(cin >> ws, Name);
     return Name;
 }
 
-void PrintEnteredName(string Name) 
-{
+void PrintName(string Name) {
     cout << "\nYour Name is: " << Name << endl;
 }
 
-int main() 
-{
-    // Solving Problem #1: Printing a fixed name
-    PrintMyName("Farah");
+// --- Problem #3: Enum & Functions ---
+enum enNumberType { Odd = 1, Even = 2 };
 
-    cout << "\n----------------------------\n";
+int ReadNumber() {
+    int Num;
+    cout << "Please enter a number? " << endl;
+    cin >> Num;
+    return Num;
+}
 
-    // Solving Problem #2: Reading from user and printing
-    PrintEnteredName(ReadName());
+enNumberType CheckNumberType(int Num) {
+    if (Num % 2 == 0)
+        return enNumberType::Even;
+    else
+        return enNumberType::Odd;
+}
+
+void PrintNumberType(enNumberType NumberType) {
+    if (NumberType == enNumberType::Even)
+        cout << "\nNumber is Even." << endl;
+    else
+        cout << "\nNumber is Odd." << endl;
+}
+
+// --- Problems #4 & #5: Struct & Logic ---
+stInfo ReadInfo() {
+    stInfo Info;
+    cout << "Please enter your Age? " << endl;
+    cin >> Info.Age;
+    cout << "Do you have driver license (0/1)? " << endl;
+    cin >> Info.HasDrivingLicense;
+    cout << "Do you have recommendation (0/1)? " << endl;
+    cin >> Info.HasRecommendation;
+    return Info;
+}
+
+bool IsAccepted(stInfo Info) {
+    if (Info.HasRecommendation) {
+        return true;
+    }
+    return (Info.Age > 21 && Info.HasDrivingLicense);
+}
+
+void PrintResult(stInfo Info) {
+    if (IsAccepted(Info))
+        cout << "\nHired" << endl;
+    else
+        cout << "\nRejected" << endl;
+}
+
+// --- Main Program ---
+int main() {
+    
+    // Problem #1
+    PrintMyName(); 
+
+    cout << "----------------------------" << endl;
+
+    // Problem #2
+    PrintName(ReadName());
+
+    cout << "----------------------------" << endl;
+
+    // Problem #3
+    PrintNumberType(CheckNumberType(ReadNumber()));
+
+    cout << "----------------------------" << endl;
+
+    // Problem #4 & #5
+    PrintResult(ReadInfo());
 
     return 0;
 }
