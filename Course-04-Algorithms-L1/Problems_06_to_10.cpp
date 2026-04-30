@@ -3,55 +3,99 @@
 
 using namespace std;
 
-// --- Problem #6: Struct & Functions (Full Name) ---
-struct stFullName {
+// --- Problem #06: Check Full Name ---
+struct stInfo
+{
     string FirstName;
     string LastName;
 };
 
-stFullName ReadFullName() {
-    stFullName Name;
-    cout << "Please enter your First Name? " << endl;
-    cin >> Name.FirstName;
-    cout << "Please enter your Last Name? " << endl;
-    cin >> Name.LastName;
-    return Name;
+stInfo ReadInfo()
+{
+    stInfo Info;
+    cout << "Enter First Name: "; cin >> Info.FirstName;
+    cout << "Enter Last Name: ";  cin >> Info.LastName;
+    return Info;
 }
 
-string GetFullName(stFullName Name) {
-    return Name.FirstName + " " + Name.LastName;
+string GetFullName(stInfo Info) {
+    return Info.FirstName + " " + Info.LastName;
 }
 
 void PrintFullName(string FullName) {
-    cout << "\nYour Full Name is: " << FullName << endl;
+    cout << "Full Name: " << FullName << endl << "---" << endl;
 }
 
-// --- Problem #7: Functions (Half Number) ---
-int ReadNumber() {
+// --- Problem #07: Half Number ---
+int ReadNumber()
+{
     int Num;
-    cout << "Please enter a number? " << endl;
-    cin >> Num;
+    cout << "Enter a number: "; cin >> Num;
     return Num;
 }
 
-float CalculateHalfNumber(int Num) {
+float CalculateHalfNumber(int Num) 
+{
     return (float)Num / 2;
 }
 
-void PrintHalfNumber(int Num) {
-    string Result = "Half of " + to_string(Num) + " is " + to_string(CalculateHalfNumber(Num));
-    cout << "\n" << Result << endl;
+void PrintHalfResult(int Num) 
+{
+    cout << "Half of " << Num << " is " << CalculateHalfNumber(Num) << endl << "---" << endl;
 }
 
-int main() {
-    // حل المشكلة رقم 6
-    PrintFullName(GetFullName(ReadFullName()));
+// --- Problem #08: Pass or Fail ---
+enum enPassFail { Pass = 1, Fail = 2 };
 
-    cout << "\n----------------------------\n";
+enPassFail CheckMark(int Mark) 
+{
+    return (Mark >= 50) ? enPassFail::Pass : enPassFail::Fail;
+}
 
-    // حل المشكلة رقم 7
-    int Number = ReadNumber();
-    PrintHalfNumber(Number);
+void PrintPassFailResult(int Mark)
+{
+    if (CheckMark(Mark) == enPassFail::Pass)
+        cout << "Result: Passed" << endl << "---" << endl;
+    else
+        cout << "Result: Failed" << endl << "---" << endl;
+}
+
+// --- Problem #09: Sum of 3 Numbers ---
+void Read3Numbers(int& N1, int& N2, int& N3)
+{
+    cout << "Enter 3 Numbers to sum:" << endl;
+    cin >> N1 >> N2 >> N3;
+}
+
+int SumOf3Numbers(int N1, int N2, int N3)
+{
+    return N1 + N2 + N3;
+}
+
+// --- Problem #10: Average of 3 Marks ---
+float CalculateAverage(int N1, int N2, int N3)
+{
+    return (float)SumOf3Numbers(N1, N2, N3) / 3;
+}
+
+int main()
+{
+    // Execution for Problem 06
+    PrintFullName(GetFullName(ReadInfo()));
+
+    // Execution for Problem 07
+    PrintHalfResult(ReadNumber());
+
+    // Execution for Problem 08
+    int Mark;
+    cout << "Enter Mark for Pass/Fail Check: "; cin >> Mark;
+    PrintPassFailResult(Mark);
+
+    // Execution for Problems 09 & 10
+    int N1, N2, N3;
+    Read3Numbers(N1, N2, N3);
+    cout << "Total Sum (Problem 09): " << SumOf3Numbers(N1, N2, N3) << endl;
+    cout << "Average (Problem 10): " << CalculateAverage(N1, N2, N3) << endl;
 
     return 0;
 }
