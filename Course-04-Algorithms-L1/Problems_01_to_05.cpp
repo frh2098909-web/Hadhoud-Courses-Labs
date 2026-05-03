@@ -88,7 +88,7 @@ void PrintResult(stInfo Info)
         cout << "\nRejected" << endl;
 }
 
-// --- Main Program ---
+// --- Main ---
 int main()
 {
     
