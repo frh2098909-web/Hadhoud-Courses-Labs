@@ -8,7 +8,8 @@ using namespace std;
 // ==========================================================
 
 // مسألة 4: توظيف سائق
-void CheckHireDriver() {
+void CheckHireDriver()
+{
     int Age;
     bool HasDriverLicense;
     cout << "\n--- Problem #4: Hire a Driver ---" << endl;
@@ -20,7 +21,8 @@ void CheckHireDriver() {
 }
 
 // مسألة 8: ناجح أم راسب
-void CheckPassFail() {
+void CheckPassFail()
+{
     float Mark;
     cout << "\n--- Problem #8: Pass/Fail ---" << endl;
     cout << "Enter Mark: "; cin >> Mark;
@@ -30,7 +32,8 @@ void CheckPassFail() {
 }
 
 // مسألة 11: متوسط ثلاث علامات (ناجح/راسب)
-void CheckAveragePassFail() {
+void CheckAveragePassFail() 
+{
     float Mark1, Mark2, Mark3;
     cout << "\n--- Problem #11: Average Pass/Fail ---" << endl;
     cout << "Enter 3 Marks: "; cin >> Mark1 >> Mark2 >> Mark3;
@@ -43,7 +46,8 @@ void CheckAveragePassFail() {
 }
 
 // مسألة 24: التحقق من نطاق العمر (18-45)
-void ValidateAgeRange() {
+void ValidateAgeRange() 
+{
     int Age;
     cout << "\n--- Problem #24: Validate Age ---" << endl;
     cout << "Enter Age: "; cin >> Age;
@@ -53,7 +57,8 @@ void ValidateAgeRange() {
 }
 
 // مسألة 49: الرقم السري للـ ATM
-void CheckATMPin() {
+void CheckATMPin() 
+{
     string PIN;
     cout << "\n--- Problem #49: ATM PIN ---" << endl;
     cout << "Enter PIN: "; cin >> PIN;
@@ -67,7 +72,8 @@ void CheckATMPin() {
 // ==========================================================
 
 // مسألة 33: تقدير العلامات (A, B, C...)
-void ShowGrade() {
+void ShowGrade() 
+{
     int Grade;
     cout << "\n--- Problem #33: Grade Level ---" << endl;
     cout << "Enter your Grade: "; cin >> Grade;
@@ -81,7 +87,8 @@ void ShowGrade() {
 }
 
 // مسألة 34: حساب نسبة العمولة
-void CalculateCommission() {
+void CalculateCommission() 
+{
     float TotalSales;
     cout << "\n--- Problem #34: Commission Percentage ---" << endl;
     cout << "Enter Total Sales: "; cin >> TotalSales;
@@ -98,7 +105,8 @@ void CalculateCommission() {
 }
 
 // مسألة 36: آلة حاسبة بسيطة
-void SimpleCalculator() {
+void SimpleCalculator() 
+{
     float Num1, Num2;
     char OpType;
     cout << "\n--- Problem #36: Simple Calculator ---" << endl;
@@ -113,7 +121,8 @@ void SimpleCalculator() {
 }
 
 // مسألة 44: يوم الأسبوع
-void PrintDayOfWeek() {
+void PrintDayOfWeek()
+{
     int Day;
     cout << "\n--- Problem #44: Day of Week ---" << endl;
     cout << "Enter Day Number (1-7): "; cin >> Day;
@@ -129,7 +138,8 @@ void PrintDayOfWeek() {
 }
 
 // مسألة 45: شهر السنة
-void PrintMonthOfYear() {
+void PrintMonthOfYear()
+{
     int Month;
     cout << "\n--- Problem #45: Month of Year ---" << endl;
     cout << "Enter Month Number (1-12): "; cin >> Month;
@@ -149,7 +159,8 @@ void PrintMonthOfYear() {
     else cout << "Wrong Month" << endl;
 }
 
-int main() {
+int main() 
+{
     // تشغيل مسائل الدرس 42
     CheckHireDriver();
     CheckPassFail();
