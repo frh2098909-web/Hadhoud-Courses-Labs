@@ -8,7 +8,8 @@ using namespace std;
 // الهدف: إيقاف الحلقة التكرارية فوراً عند تحقق شرط معين
 // ==========================================================
 
-void SearchWithBreak() {
+void SearchWithBreak()
+{
     cout << "\n--- Lesson 52: Break Statement (Search Example) ---" << endl;
 
     // تعريف مصفوفة تحتوي على 10 عناصر كما في مثال الدرس
@@ -32,7 +33,8 @@ void SearchWithBreak() {
 // الهدف: تخطي الدورة الحالية فقط وإكمال الدورة التي تليها
 // ==========================================================
 
-void SumWithContinue() {
+void SumWithContinue()
+{
     cout << "\n--- Lesson 53: Continue Statement (Sum Numbers < 50) ---" << endl;
 
     int sum = 0;
@@ -60,7 +62,8 @@ void SumWithContinue() {
 // Main Function
 // ==========================================================
 
-int main() {
+int main()
+{
 
     // 1. تشغيل مثال الـ Break
     SearchWithBreak();
