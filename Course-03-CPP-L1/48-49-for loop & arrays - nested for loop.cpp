@@ -7,38 +7,45 @@ using namespace std;
 // [الدرس 48]: For Loop & Arrays
 // ==========================================================
 
-struct strInfo {
+struct strInfo 
+{
     string FirstName;
     string LastName;
     int Age;
     string Phone;
 };
 
-void ReadInfo(strInfo& Info) {
+void ReadInfo(strInfo& Info)
+{
     cout << "Enter FirstName: "; cin >> Info.FirstName;
     cout << "Enter LastName: "; cin >> Info.LastName;
     cout << "Enter Age: "; cin >> Info.Age;
     cout << "Enter Phone: "; cin >> Info.Phone;
 }
 
-void PrintInfo(strInfo Info) {
+void PrintInfo(strInfo Info)
+{
     cout << "\nFirstName: " << Info.FirstName << " | LastName: " << Info.LastName;
     cout << "\nAge: " << Info.Age << " | Phone: " << Info.Phone;
     cout << "\n------------------------------------------";
 }
 
-void ReadPersonsArray(strInfo Persons[100], int& NumberOfPersons) {
+void ReadPersonsArray(strInfo Persons[100], int& NumberOfPersons) 
+{
     cout << "How many persons do you want to enter? ";
     cin >> NumberOfPersons;
-    for (int i = 0; i < NumberOfPersons; i++) {
+    for (int i = 0; i < NumberOfPersons; i++)
+        {
         cout << "\nPlease enter person's " << i + 1 << " Info:\n";
         ReadInfo(Persons[i]);
-    }
+        }
 }
 
-void PrintPersonsArray(strInfo Persons[100], int NumberOfPersons) {
+void PrintPersonsArray(strInfo Persons[100], int NumberOfPersons)
+{
     cout << "\n--- Displaying Persons Information ---";
-    for (int i = 0; i < NumberOfPersons; i++) {
+    for (int i = 0; i < NumberOfPersons; i++) 
+    {
         PrintInfo(Persons[i]);
     }
 }
@@ -47,7 +54,8 @@ void PrintPersonsArray(strInfo Persons[100], int NumberOfPersons) {
 // [الدرس 49]: Nested For Loop (الأمثلة من 1 إلى 9)
 // ==========================================================
 
-void RunNestedLoopExamples() {
+void RunNestedLoopExamples() 
+{
     
     // مثال 1: جدول الضرب
     cout << "\n\n[Example 1: Multiplication Table 1-10]\n";
@@ -119,7 +127,8 @@ void RunNestedLoopExamples() {
 // Main Function
 // ==========================================================
 
-int main() {
+int main() 
+{
     // 1. تطبيق الدرس 48
     strInfo Persons[100];
     int NumberOfPersons = 0;
