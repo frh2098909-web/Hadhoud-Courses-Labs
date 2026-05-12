@@ -75,6 +75,7 @@ int main()
 
     int Result = stoi(String2) * stoi(String3);
     cout << String2 << " * " << String3 << " = " << Result << endl;
-
+   
     return 0;
+    
 }
