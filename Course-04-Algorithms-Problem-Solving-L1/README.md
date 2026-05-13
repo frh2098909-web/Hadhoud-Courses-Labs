@@ -12,7 +12,7 @@
 *   **هيكلة البيانات (Data Structuring):** استخدام الـ `Structs` والـ `Enums` لتنظيم البيانات وجعل الكود أكثر منطقية واحترافية.
 
 ## 🛠️ الأدوات والتقنيات
-*   **IDE:** Microsoft Visual Studio (البنفسجي).
+*   **IDE:** Microsoft Visual Studio.
 *   **Language:** C++.
 *   **Libraries:** الاعتماد الأساسي على `iostream` و `string` مع استخدام مكتبة `cmath` في المسائل الرياضية المتقدمة.
 
